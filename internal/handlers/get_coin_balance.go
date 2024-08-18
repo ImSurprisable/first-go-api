@@ -38,14 +38,14 @@ func GetCoinBalance(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var response = api.CoinBalanceParams{
-		Balance: (*tokenDetails).Coins
-		Code: http.StatusOK
+	var response = api.CoinBalanceResponse{
+		Balance: (*tokenDetails).Coins,
+		Code: http.StatusOK,
 	}
 
 	w.Header().Set("Content-Type", "application/json")
 	err = json.NewEncoder(w).Encode(response)
-	if err != nill {
+	if err != nil {
 		log.Error(err)
 		api.InternalErrorHandler(w)
 		return

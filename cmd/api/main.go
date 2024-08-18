@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/ImSurprisable/go-api-tutorial/handlers"
+	"github.com/ImSurprisable/go-api-tutorial/internal/handlers"
 	"github.com/go-chi/chi"
 	log "github.com/sirupsen/logrus"
 )
@@ -22,12 +22,10 @@ func main() {
 #       #   #          #   #   #   #    #
 #  ##   #   #          #####   ####     #
 #   #   #   #          #   #   #        #
-#####   #####          #   #   #      #####
-`)
+#####   #####          #   #   #      #####  `)
 
 	err := http.ListenAndServe("localhost:8000", r)
 	if (err != nil) {
 		log.Error(err)
 	}
-
 }

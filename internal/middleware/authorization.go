@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/ImSurprisable/go-api-tutorial/api"
+	"github.com/ImSurprisable/go-api-tutorial/internal/tools"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -36,6 +37,7 @@ func Authorization(next http.Handler) http.Handler {
 		if (loginDetails == nil || (token != (*loginDetails).AuthToken)) {
 			log.Error(UnAuthorizedError)
 			api.RequestErrorHandler(w, UnAuthorizedError)
+			return
 		}
 
 		next.ServeHTTP(w, r)
