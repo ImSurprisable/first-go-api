@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"github.com/ImSurprisable/go-api-tutorial/internal/middleware"
 	"github.com/go-chi/chi"
 	chimiddle "github.com/go-chi/chi/middleware"
+	"github.com/unsurprisable/go-api-tutorial/internal/middleware"
 )
 
 func Handler(r *chi.Mux) {

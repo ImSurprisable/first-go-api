@@ -4,9 +4,9 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/ImSurprisable/go-api-tutorial/api"
-	"github.com/ImSurprisable/go-api-tutorial/internal/tools"
 	log "github.com/sirupsen/logrus"
+	"github.com/unsurprisable/go-api-tutorial/api"
+	"github.com/unsurprisable/go-api-tutorial/internal/tools"
 )
 
 var UnAuthorizedError = errors.New("Invalid username or token")
